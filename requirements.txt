@@ -1,0 +1,24 @@
+# Core Scientific & LLM
+numpy>=1.24.0
+scipy>=1.10.0
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.38.0
+sentence-transformers>=2.6.0
+accelerate>=0.27.0
+
+# Information Retrieval & Vector DB
+rank-bm25>=0.2.2
+qdrant-client>=1.8.0
+faiss-cpu>=1.7.4
+
+# Vision & Multimodal
+Pillow>=10.0.0
+timm>=0.9.12
+open-clip-torch>=2.24.0
+
+# Data Ingestion & Utilities
+pydantic>=2.0.0
+rich>=13.0.0
+tqdm>=4.65.0
+tabulate>=0.9.0

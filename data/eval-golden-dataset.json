@@ -1,0 +1,146 @@
+{
+  "dataset_name": "Aurora-Fashion-Amazon-US-Golden-Dataset",
+  "version": "2026.1",
+  "market": "Amazon.com (US)",
+  "category": "Apparel, Footwear, Bags & Luggage",
+  "total_cases": 10,
+  "quality_gate": {
+    "min_recall_at_3": 0.95,
+    "required_faithfulness": 1.0,
+    "no_deprecated_leakage": 1.0,
+    "refusal_precision": 1.0
+  },
+  "test_cases": [
+    {
+      "id": "T01",
+      "query": "冲锋衣仅喷涂 DWR 涂层未做全压胶处理，Listing 标题能否宣传为 100% Waterproof？",
+      "expected_docs": [
+        "DOC-US-FTC-001"
+      ],
+      "must_contain": [
+        "严禁标为 Waterproof",
+        "只能标 Water-Resistant 或 Water-Repellent",
+        "FTC 16 CFR Part 303"
+      ],
+      "category": "Compliance"
+    },
+    {
+      "id": "T02",
+      "query": "查询战术双肩包 SKU-BP701 采用的是哪种 Cordura 面料和拉链扣具标准？",
+      "expected_docs": [
+        "DOC-US-BP-701"
+      ],
+      "must_contain": [
+        "Cordura 500D",
+        "Duraflex UTX",
+        "YKK 10#"
+      ],
+      "category": "Sparse_Identifier"
+    },
+    {
+      "id": "T03",
+      "query": "身高 160cm 买家购买 2026 女款冲锋衣工装裤，应该推荐哪种 Inseam 裤长尺寸？",
+      "expected_docs": [
+        "DOC-US-SIZE-2026-WOMEN"
+      ],
+      "must_contain": [
+        "Petite Inseam",
+        "28 英寸",
+        "28.0\""
+      ],
+      "category": "Multi_Dimensional_Sizing"
+    },
+    {
+      "id": "T04",
+      "query": "买家在 11 月 20 日购买的外套在次年 1 月 10 日发起无理由退货，运费由谁出？",
+      "expected_docs": [
+        "DOC-US-RET-001"
+      ],
+      "must_contain": [
+        "Q4 Holiday Extended Return",
+        "次年 1 月 31 日",
+        "免运费 Free Returns"
+      ],
+      "category": "Temporal_Update"
+    },
+    {
+      "id": "T05",
+      "query": "2026 年新款女款冲锋衣 US M 码胸围标准是多少英寸？",
+      "expected_docs": [
+        "DOC-US-SIZE-2026-WOMEN"
+      ],
+      "must_contain": [
+        "36.5\" - 37.5\"",
+        "1.5 英寸收腰"
+      ],
+      "forbidden_docs": [
+        "DOC-US-SIZE-2023-OLD"
+      ],
+      "category": "Version_Conflict"
+    },
+    {
+      "id": "T06",
+      "query": "战术背包 SKU-BP701 的面料经向和纬向织物断裂强力指标是多少牛顿？",
+      "expected_docs": [
+        "DOC-US-BP-701"
+      ],
+      "must_contain": [
+        "经向 ≥ 1800 N",
+        "纬向 ≥ 1500 N"
+      ],
+      "category": "Engineering_Spec"
+    },
+    {
+      "id": "T07",
+      "query": "今年爆火的“老钱风”秋冬针织开衫 SKU-CR502 采用的是几针什么面料？",
+      "expected_docs": [
+        "DOC-US-KNIT-502"
+      ],
+      "must_contain": [
+        "100% 澳大利亚超细美利奴羊毛",
+        "16 针",
+        "16-Gauge"
+      ],
+      "category": "Vocabulary_Mismatch"
+    },
+    {
+      "id": "T08",
+      "query": "瑜伽裤已拆封并剪下吊牌，买家 15 天后退货卖家能否扣除 15% 包装折旧费？",
+      "expected_docs": [
+        "DOC-US-RET-001"
+      ],
+      "must_contain": [
+        "严禁收取 Restocking Fee",
+        "不影响全额退款"
+      ],
+      "forbidden_docs": [
+        "DOC-US-RET-2023-OLD"
+      ],
+      "category": "Policy_Deprecation"
+    },
+    {
+      "id": "T09",
+      "query": "极光出海是否在美国纽约曼哈顿有线下实体店支持现场量体裁衣和自提？",
+      "expected_docs": [],
+      "expected_refusal": true,
+      "must_contain": [
+        "知识库中未包含相关信息",
+        "仅支持亚马逊线上 FBA 履约"
+      ],
+      "category": "Out_Of_Domain_Refusal"
+    },
+    {
+      "id": "T10",
+      "query": "纯棉白 T 恤与深色牛仔裤能否混在一起进行 60 度高温烘干？",
+      "expected_docs": [
+        "DOC-NOISE-GENERIC-01"
+      ],
+      "must_contain": [
+        "建议冷水洗涤",
+        "深浅分开",
+        "避免高温烘干"
+      ],
+      "category": "Noise_Defense"
+    }
+  ]
+}
