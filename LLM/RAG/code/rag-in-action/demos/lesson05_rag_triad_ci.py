@@ -21,7 +21,7 @@ def evaluate_pipeline():
     print("【第 5 课实战】RAG Triad 量化评测与 100% 事实忠实度 CI/CD 质量发布门禁")
     print("=" * 85)
 
-    data_dir = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data")
+    data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     with open(os.path.join(data_dir, "knowledge-base.json"), "r", encoding="utf-8") as f:
         docs = json.load(f)
     with open(os.path.join(data_dir, "eval-golden-dataset.json"), "r", encoding="utf-8") as f:

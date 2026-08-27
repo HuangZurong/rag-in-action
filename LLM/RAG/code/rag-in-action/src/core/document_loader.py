@@ -9,7 +9,7 @@ def load_amazon_knowledge_base(json_path: str = None) -> List[Document]:
     Loads Amazon US Fashion knowledge base into LangChain Document objects.
     """
     if json_path is None:
-        json_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "data", "knowledge-base.json")
+        json_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "knowledge-base.json")
 
     with open(json_path, "r", encoding="utf-8") as f:
         raw_docs = json.load(f)
