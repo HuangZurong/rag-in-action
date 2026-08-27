@@ -34,7 +34,7 @@ data/
 │   └── 卖家基础指引.md
 ├── images/                      HuggingFace ceyda/fashion-products-small 缓存
 ├── eval-golden-dataset.json     评测黄金数据集
-└── case-brief.md                业务背景简介
+└── README.md
 ```
 
 ## 设计说明
