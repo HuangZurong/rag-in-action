@@ -10,16 +10,16 @@
 data/
 ├── 产品/
 │   ├── 冲锋衣-JK902/
-│   │   ├── 技术规格.md          DOC-PROD-JK902-TECH     Active
+│   │   ├── 产品规格.md          DOC-PROD-JK902-TECH     Active
 │   │   └── 质检报告.md          SGS-RPT-JK902-2026      Active
 │   ├── 瑜伽裤-YG301/
-│   │   ├── 技术规格.md          DOC-PROD-YG301-TECH     Active
+│   │   ├── 产品规格.md          DOC-PROD-YG301-TECH     Active
 │   │   └── 质检报告.md          SGS-RPT-YG301-2026      Active
 │   ├── 战术背包-BP701/
-│   │   ├── 技术规格.md          DOC-PROD-BP701-TECH     Active
+│   │   ├── 产品规格.md          DOC-PROD-BP701-TECH     Active
 │   │   └── 质检报告.md          SGS-RPT-BP701-2026      Active
 │   └── 羊毛开衫-CR502/
-│       ├── 技术规格.md          DOC-PROD-CR502-TECH     Active
+│       ├── 产品规格.md          DOC-PROD-CR502-TECH     Active
 │       └── 质检报告.md          SGS-RPT-CR502-2026      Active
 ├── 法规政策/
 │   ├── FTC纺织标识法.md         DOC-POL-FTC-001         Active
@@ -39,7 +39,7 @@ data/
 
 ## 设计说明
 
-- **产品文档**: 每个产品含技术规格书 (5页) 和 SGS 质检报告 (3页), 包含面料、辅料、工艺、测试数据
+- **产品文档**: 每个产品含产品规格书 (5页) 和 SGS 质检报告 (3页), 包含面料、辅料、工艺、测试数据
 - **法规政策**: 含现行与废止版本, 废止版内容自然体现已过时, 不标注"干扰项"
 - **尺码表**: 含完整对照矩阵、国际码转换、身材测量指南、版型说明
 - **噪音文档**: 与业务无关的通用常识, 用于测试检索系统能否过滤无关内容
