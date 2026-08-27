@@ -19,7 +19,7 @@ def main():
     print("【第 4 课实战】跨页多维大表表头注入与 Parent-Child (Small-to-Big) 父子切片")
     print("=" * 80)
 
-    kb_path = os.path.join(os.path.dirname(__file__), "..", "data", "knowledge-base.json")
+    kb_path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "knowledge-base.json")
     with open(kb_path, "r", encoding="utf-8") as f:
         docs = json.load(f)
 
