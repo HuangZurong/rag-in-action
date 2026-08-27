@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-第 3 课 Demo：顶会最佳实践与本地真实图库多模态以图搜款实战
+第 3 课 Demo：顶会最佳实践与 HuggingFace 真实图库多模态以图搜款实战
 """
 import os
 import sys
@@ -14,11 +14,12 @@ from src.multimodal.visual_search import MultimodalProductSearcher
 
 def main():
     print("=" * 80)
-    print("【第 3 课实战】顶会最佳实践与本地多模态以图搜款实战 (fashion-products-small)")
+    print("【第 3 课实战】顶会最佳实践与多模态以图搜款实战 (HuggingFace: ceyda/fashion-products-small)")
     print("=" * 80)
 
-    image_dir = r"D:\data\zby\fashion-products-small\384\images\downloads"
-    print(f"[*] 加载本地服饰鞋包真实多模态图像数据集: {image_dir}")
+    from src.multimodal.visual_search import load_fashion_images_from_hf
+    image_dir = load_fashion_images_from_hf()
+    print(f"[*] 加载 HuggingFace 服饰图库: {image_dir}")
 
     searcher = MultimodalProductSearcher(image_dir)
     print(f"[*] 成功扫描并建立视觉特征索引，样本商品图数量: {len(searcher.image_paths)} 张\n")

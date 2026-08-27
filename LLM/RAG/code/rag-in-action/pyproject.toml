@@ -21,6 +21,8 @@ keywords = [
 ]
 dependencies = [
     "accelerate>=0.29.0",
+    "datasets>=2.20.0",
+    "huggingface-hub>=0.24.0",
     "langchain>=0.2.0",
     "langchain-community>=0.2.0",
     "langchain-core>=0.2.0",

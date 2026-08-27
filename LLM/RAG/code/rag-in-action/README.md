@@ -45,7 +45,7 @@ LLM/RAG/
 │   ├── knowledge-base.md
 │   ├── case-brief.md
 │   ├── eval-golden-dataset.json
-│   └── images/                       # 多模态图库 (对接 D:\data\zby\fashion-products-small)
+│   └── images/                       # 多模态图库 (HuggingFace: ceyda/fashion-products-small)
 │
 └── research/                         # 🔬 行业调研与对标笔记
 ```
