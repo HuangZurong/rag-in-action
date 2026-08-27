@@ -43,3 +43,6 @@ Thumbs.db
 chroma_db/
 qdrant_storage/
 vector_cache/
+
+# Local courseware workspace outside the repository project
+LLM/
