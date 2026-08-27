@@ -1,8 +1,9 @@
+# Keep the repository limited to the nested rag-in-action project.
 .venv/
 *
-!.gitignore
-!LLM/
-!LLM/RAG/
-!LLM/RAG/code/
-!LLM/RAG/code/rag-in-action/
-!LLM/RAG/code/rag-in-action/**
+!/.gitignore
+!/LLM/
+!/LLM/RAG/
+!/LLM/RAG/code/
+!/LLM/RAG/code/rag-in-action/
+!/LLM/RAG/code/rag-in-action/**
