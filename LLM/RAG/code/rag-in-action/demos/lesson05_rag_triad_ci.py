@@ -24,7 +24,7 @@ def evaluate_pipeline():
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     with open(os.path.join(data_dir, "knowledge-base.json"), "r", encoding="utf-8") as f:
         docs = json.load(f)
-    with open(os.path.join(data_dir, "eval-golden-dataset.json"), "r", encoding="utf-8") as f:
+    with open(os.path.join(data_dir, "评测黄金数据集.json"), "r", encoding="utf-8") as f:
         eval_data = json.load(f)
 
     test_cases = eval_data["test_cases"]

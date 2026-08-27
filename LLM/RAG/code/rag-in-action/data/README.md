@@ -33,7 +33,7 @@ data/
 │   ├── 洗涤常识.md
 │   └── 卖家基础指引.md
 ├── images/                      HuggingFace ceyda/fashion-products-small 缓存
-├── eval-golden-dataset.json     评测黄金数据集
+├── 评测黄金数据集.json          评测黄金数据集
 └── README.md
 ```
 
