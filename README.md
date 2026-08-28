@@ -32,7 +32,7 @@ uv run jupyter lab
 LLM_API_KEY=your-api-key
 LLM_BASE_URL=https://your-openai-compatible-endpoint/v1
 LLM_MODEL=your-model-name
-EMBEDDING_MODEL=text-embedding-3-small
+EMBEDDING_MODEL=BAAI/bge-small-zh-v1.5
 ```
 
 Sentence Transformers 首次运行会从 Hugging Face 下载 Embedding 模型；需要生成答案时，还要配置 LLM API。Qdrant 使用本地内存模式，不需要单独启动服务。
