@@ -30,3 +30,5 @@ Thumbs.db
 chroma_db/
 qdrant_storage/
 vector_cache/
+
+.env
