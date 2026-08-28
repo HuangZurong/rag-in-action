@@ -6,14 +6,14 @@
 
 ```text
 notebooks/
-├── 01-what-is-rag.ipynb
-├── 02-calling-an-llm.ipynb
-├── 03-embeddings.ipynb
-├── 04-chunking.ipynb
-├── 05-vector-search.ipynb
-├── 06-build-a-rag-pipeline.ipynb
-├── 07-rag-with-langchain.ipynb
-└── 08-hybrid-retrieval.ipynb
+├── 01-什么是RAG.ipynb
+├── 02-调用大模型.ipynb
+├── 03-Embedding向量.ipynb
+├── 04-文档分块.ipynb
+├── 05-向量检索.ipynb
+├── 06-构建Naive-RAG.ipynb
+├── 07-用LangChain实现RAG.ipynb
+└── 08-混合检索.ipynb
 ```
 
 ## 运行
@@ -42,3 +42,4 @@ EMBEDDING_MODEL=text-embedding-3-small
 `data/` 下的 Markdown 文件是教学知识库，包含产品规格、法规政策、尺码表和噪音文档。过期文档保留在数据中，用于观察检索结果中的版本问题；Notebook 默认不把文件名包含“废止”的文档放入基础检索集合。
 
 案例数据为教学模拟资产。
+
