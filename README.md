@@ -1,74 +1,44 @@
-# ⚡ rag-in-action
+# rag-in-action
 
-> **生产级 RAG 架构演进：从入门到专家课程配套教学代码**  
-> —— 7 课 × 40 分钟录播精课 · 亚马逊美国站服饰箱包全流程实战  
-> **"Building Deterministic Engineering Harness for Probabilistic LLMs."**
+亚马逊美国站服饰箱包知识库的 RAG 入门课程代码。
 
-[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![Managed with uv](https://img.shields.io/badge/managed%20by-uv-purple.svg)](https://github.com/astral-sh/uv)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![Repo: rag-in-action](https://img.shields.io/badge/GitHub-HuangZurong%2Frag--in--action-orange.svg)](https://github.com/HuangZurong/rag-in-action)
-
----
-
-## 🗺️ 项目结构
+代码按“先拆步骤，再串流程”的顺序组织为普通 Jupyter Notebook，最后才加入混合检索：
 
 ```text
-LLM/RAG/
-├── code/
-│   └── rag-in-action/                # ⚙️ Python 工程根目录
-│   ├── pyproject.toml
-│   ├── .python-version
-│   ├── uv.lock
-│   ├── src/                          # 核心 RAG 算法与工程模块
-│   │   ├── core/                     # 文档加载
-│   │   ├── ingestion/                # 多源文档解析与表头注入
-│   │   ├── chunking/                 # Parent-Child 父子切片
-│   │   ├── retrieval/                # 混合检索 (BM25 + Dense + RRF) 与 Cross-Encoder 重排
-│   │   ├── multimodal/               # 多模态 RAG (FashionSigLIP 跨模态以图搜款)
-│   │   ├── packing/                  # Context Repacking (Reverse 反向升序装箱)
-│   │   └── evaluation/               # RAG Triad 量化评估
-│   └── demos/                        # 各课配套一键运行脚本
-│       ├── lesson01_naive_rag.py
-│       ├── lesson02_hybrid_bm25_rerank.py
-│       ├── lesson03_multimodal_search.py
-│       ├── lesson04_parent_child_demo.py
-│       └── lesson05_rag_triad_ci.py
-│
-├── courseware/                       # 📚 课件与演示素材
-│   ├── docs/                         # 课程大纲与 PPT 审查
-│   ├── output/                       # 生成的 PPT 幻灯片
-│   └── demo-assets/                  # 演示素材与讲稿
-│
-├── data/                             # 📦 知识库与评测数据
-│   ├── knowledge-base.json
-│   ├── knowledge-base.md
-│   ├── case-brief.md
-│   ├── eval-golden-dataset.json
-│   └── images/                       # 多模态图库 (HuggingFace: ceyda/fashion-products-small)
-│
-└── research/                         # 🔬 行业调研与对标笔记
+notebooks/
+├── 01-what-is-rag.ipynb
+├── 02-calling-an-llm.ipynb
+├── 03-embeddings.ipynb
+├── 04-chunking.ipynb
+├── 05-vector-search.ipynb
+├── 06-build-a-rag-pipeline.ipynb
+├── 07-rag-with-langchain.ipynb
+└── 08-hybrid-retrieval.ipynb
 ```
 
----
-
-## ⚡ 快速启动
+## 运行
 
 ```bash
 cd LLM/RAG/code/rag-in-action
 uv sync
-
-# 运行第 1 课 Demo
-uv run demos/lesson01_naive_rag.py
-
-# 运行第 2 课 Demo
-uv run demos/lesson02_hybrid_bm25_rerank.py
-
-# 运行第 5 课 Demo
-uv run demos/lesson05_rag_triad_ci.py
+uv run jupyter lab
 ```
 
----
+按顺序打开 `notebooks/` 下的 Notebook。前 6 个 Notebook 用普通 Python 展示 RAG 的基本步骤，第 7 个展示 LangChain 如何串起同一条链路，第 8 个加入 BM25 和 RRF 混合检索。
 
-## 📜 开源协议与声明
-本项目基于 Apache 2.0 开源协议，所有案例数据均为教学脱敏与模拟构造资产。
+如果要调用大模型，在项目根目录创建 `.env`：
+
+```env
+LLM_API_KEY=your-api-key
+LLM_BASE_URL=https://your-openai-compatible-endpoint/v1
+LLM_MODEL=your-model-name
+EMBEDDING_MODEL=text-embedding-3-small
+```
+
+没有 API Key 时，文档加载、分块、BM25 和 Prompt 组装仍可运行；需要 Embedding 或生成答案的单元会提示配置 API。
+
+## 数据
+
+`data/` 下的 Markdown 文件是教学知识库，包含产品规格、法规政策、尺码表和噪音文档。过期文档保留在数据中，用于观察检索结果中的版本问题；Notebook 默认不把文件名包含“废止”的文档放入基础检索集合。
+
+案例数据为教学模拟资产。
