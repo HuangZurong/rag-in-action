@@ -2,12 +2,12 @@
 
 亚马逊美国站服饰箱包知识库的 RAG 入门课程代码。
 
-代码按“先拆步骤，再串流程”的顺序组织为普通 Jupyter Notebook，最后才加入混合检索：
+代码按“先会调用大模型，再拆解 RAG 步骤，最后串起完整流程”的顺序组织为普通 Jupyter Notebook：
 
 ```text
 notebooks/
-├── 01-什么是RAG.ipynb
-├── 02-调用大模型.ipynb
+├── 01-调用大模型.ipynb
+├── 02-为什么需要RAG.ipynb
 ├── 03-文本向量.ipynb
 ├── 04-文档分块.ipynb
 ├── 05-向量检索.ipynb
