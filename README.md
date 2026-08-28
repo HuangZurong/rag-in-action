@@ -8,10 +8,10 @@
 notebooks/
 ├── 01-什么是RAG.ipynb
 ├── 02-调用大模型.ipynb
-├── 03-Embedding向量.ipynb
+├── 03-文本向量.ipynb
 ├── 04-文档分块.ipynb
 ├── 05-向量检索.ipynb
-├── 06-构建Naive-RAG.ipynb
+├── 06-构建最小RAG.ipynb
 ├── 07-用LangChain实现RAG.ipynb
 └── 08-混合检索.ipynb
 ```
