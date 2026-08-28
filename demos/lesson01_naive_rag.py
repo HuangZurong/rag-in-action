@@ -51,7 +51,7 @@ def main():
     retriever = LangChainDenseRetriever(docs=docs)
 
     prompt_template = ChatPromptTemplate.from_messages([
-        ("system", """你是由极光出海（Aurora Fashion）打造的亚马逊美国站服饰箱包专业 AI 参谋。
+        ("system", """你是亚马逊美国站服饰箱包专业 AI 参谋。
 请严格基于以下 <context> 标签内的官方知识库文档回答问题，严禁胡乱推测或捏造参数。
 
 <context>
@@ -68,7 +68,7 @@ def main():
     print("[*] 正在执行 LangChain LCEL 链检索与装箱...")
     prompt_value = naive_rag_chain.invoke(query_easy)
     
-    rag_output = """根据极光出海官方选品指南（DOC-US-YG-301）：
+    rag_output = """根据官方产品规格书（DOC-PROD-YG301-TECH）：
 1. 面料黄金配比：推荐采用 75% Nylon 66（超细锦纶） + 25% Lycra Spandex（莱卡四面弹氨纶）；
 2. 纱线与克重规格：40D/48F 双面精密经编织造，克重严格控制在 230 GSM（±5g），表面经碳素微磨毛提供裸感丝滑触感；
 3. 防透光标准：深蹲极限拉伸状态下透光率 ≤ 2%，必须通过 SGS 防透光 5 级测试（Squat-Proof）。"""
