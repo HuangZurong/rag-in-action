@@ -7,11 +7,11 @@
 ```text
 notebooks/
 ├── 01-调用大模型.ipynb
-├── 02-为什么需要RAG.ipynb
+├── 02-RAG必要性.ipynb
 ├── 03-文本向量.ipynb
 ├── 04-文档分块.ipynb
 ├── 05-向量检索.ipynb
-├── 06-构建最小RAG.ipynb
+├── 06-最小RAG实现.ipynb
 ├── 07-LangChain实现.ipynb
 └── 08-混合检索.ipynb
 ```
