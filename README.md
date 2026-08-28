@@ -12,7 +12,7 @@ notebooks/
 ├── 04-文档分块.ipynb
 ├── 05-向量检索.ipynb
 ├── 06-构建最小RAG.ipynb
-├── 07-用LangChain实现RAG.ipynb
+├── 07-LangChain实现.ipynb
 └── 08-混合检索.ipynb
 ```
 
@@ -35,7 +35,7 @@ LLM_MODEL=your-model-name
 EMBEDDING_MODEL=text-embedding-3-small
 ```
 
-没有 API Key 时，文档加载、分块、BM25 和 Prompt 组装仍可运行；需要 Embedding 或生成答案的单元会提示配置 API。
+Sentence Transformers 首次运行会从 Hugging Face 下载 Embedding 模型；需要生成答案时，还要配置 LLM API。Qdrant 使用本地内存模式，不需要单独启动服务。
 
 ## 数据
 
